@@ -19,9 +19,6 @@ jobs:
       - name: get-status-before
         run: |
           git status
-      - name: get-fetch-tags
-        run: |
-          git fetch --tags origin tags/${{ github.event.inputs.tag }}
       - name: merge-tag
         run: |
           git pull origin main --allow-unrelated-histories
